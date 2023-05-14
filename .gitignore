@@ -25,3 +25,16 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio & VS Code
+.vs/
+.vscode/
+
+# Mac
+.DS_Store
