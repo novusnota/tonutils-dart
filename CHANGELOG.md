@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.5.1
+
+Minor fixes for pub.dev upload
+
 ## 0.5.0
 
 Minor release for the semver, major release for the community!
