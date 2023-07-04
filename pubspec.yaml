@@ -1,5 +1,5 @@
 name: tonutils
-description: Dart/Flutter library for TON blockchain
+description: A comprehensive, composable and versatile Dart/Flutter library for TON blockchain
 repository: https://github.com/novusnota/tonutils-dart
 issue_tracker: https://github.com/novusnota/tonutils-dart/issues
 version: 0.5.0
