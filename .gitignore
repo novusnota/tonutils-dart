@@ -1,15 +1,20 @@
 # See https://www.dartlang.org/guides/libraries/private-files
 
 # Files and directories created by pub
+# Or generally related to Flutter/Dart/Pub
+**/ios/Flutter/.last_build_id
 .dart_tool/
 .packages
+.pub-cache/
+.pub/
 build/
 # If you're building an application, you may want to check-in your pubspec.lock
 pubspec.lock
 
 # Directory created by dartdoc
-# If you don't generate documentation locally you can remove this line.
+# If you don't generate documentation locally you can remove these lines.
 doc/api/
+**/doc/api/
 
 # dotenv environment variables file
 .env*
@@ -38,3 +43,36 @@ doc/api/
 
 # Mac
 .DS_Store
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.atom/
+.buildlog/
+.history
+.svn/
+
+# Web
+lib/generated_plugin_registrant.dart
+
+# Symbolication
+app.*.symbols
+
+# Obfuscation
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Coverage
+/coverage/*
+codecov
+
+# API keys for TON HTTP API
+.api_key_mainnet
+.api_key_testnet
+
