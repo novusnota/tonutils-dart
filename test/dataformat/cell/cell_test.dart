@@ -1,6 +1,5 @@
 import 'dart:typed_data';
 
-import 'package:convert/convert.dart';
 import 'package:test/test.dart' show expect, group, test;
 import 'package:tonutils/tonutils.dart' show BitString, Cell, CellType;
 

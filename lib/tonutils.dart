@@ -5,5 +5,7 @@ library tonutils;
 export 'client.dart';
 export 'crypto.dart';
 export 'dataformat.dart';
+export 'jetton.dart';
 export 'mnemonic.dart';
+export 'nft.dart';
 export 'wallet.dart';
