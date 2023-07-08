@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.5.2
+
+Version bump for pub.dev re-evaluation
+
 ## 0.5.1
 
 Minor fixes for pub.dev upload

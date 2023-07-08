@@ -2,7 +2,7 @@ name: tonutils
 description: A comprehensive, composable and versatile Dart/Flutter library for TON blockchain
 repository: https://github.com/novusnota/tonutils-dart
 issue_tracker: https://github.com/novusnota/tonutils-dart/issues
-version: 0.5.1
+version: 0.5.2
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
