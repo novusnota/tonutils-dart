@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.5.3
+
+Lowered version of `collection` library from `1.17.2` to `1.17.1` to improve compatibility with the current Flutter SDK version
+
 ## 0.5.2
 
 Version bump for pub.dev re-evaluation
