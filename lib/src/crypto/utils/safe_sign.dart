@@ -27,11 +27,14 @@ Uint8List _createSafeSignHash(Cell cell, String seed) {
   return SHA256Digest().process(bb.takeBytes());
 }
 
-safeSign(Cell cell, Uint8List privateKey, [String seed = _defaultSeed]) {
+/// Returns a signature as Uint8List from the hash of [cell] and [ceed] and a [privateKey]
+Uint8List safeSign(Cell cell, Uint8List privateKey,
+    [String seed = _defaultSeed]) {
   return sign(_createSafeSignHash(cell, seed), privateKey);
 }
 
-safeSignVerify(Cell cell, Uint8List signature, Uint8List publicKey,
+/// Returns true if hash from [cell] and [seed] confirms to the [signature] and [publicKey], and false otherwise
+bool safeSignVerify(Cell cell, Uint8List signature, Uint8List publicKey,
     [String seed = _defaultSeed]) {
-  return signVerify(_createSafeSignHash(cell, seed), publicKey);
+  return signVerify(_createSafeSignHash(cell, seed), signature, publicKey);
 }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.5.4
+
+Bugfix of crypto sign, signVerify and safeSign functions: [issue](https://github.com/novusnota/tonutils-dart/issues/1)
+
 ## 0.5.3
 
 Lowered version of `collection` library from `1.17.2` to `1.17.1` to improve compatibility with the current Flutter SDK version
