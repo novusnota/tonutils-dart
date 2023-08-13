@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 0.5.5
+
+Bugfix of internal function _parseCallGetMethod: [issue](https://github.com/novusnota/tonutils-dart/issues/2)
+
+Misc:
+- Better usage of Cell.fromBocBase64 function
+- Updated wallet address for TonJsonRpc tests
+
 ## 0.5.4
 
 Bugfix of crypto sign, signVerify and safeSign functions: [issue](https://github.com/novusnota/tonutils-dart/issues/1)

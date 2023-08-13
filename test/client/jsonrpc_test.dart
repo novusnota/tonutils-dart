@@ -13,35 +13,35 @@ void main() {
     apiKeyMainnet.isNotEmpty ? apiKeyMainnet : null,
   );
 
-  final testAddress =
-      InternalAddress.parse('EQCD39VS5jcptHL8vMjEXrzGaRcCVYto7HUn4bpAOg8xqB2N');
+  final mainnetAddress = InternalAddress.parse(
+      'EQDntPGyh1m8HMZ6i8LSuVCh1hyTh7ENXbRMaUNk8h6bxySU'); // TON Footsteps
 
   group('client/jsonrpc', () {
     test('getContractState', () async {
-      var state = await client.getContractState(testAddress);
+      var state = await client.getContractState(mainnetAddress);
       print(state.state);
     });
 
     test('getBalance', () async {
-      var balance = await client.getBalance(testAddress);
+      var balance = await client.getBalance(mainnetAddress);
       print(balance);
     });
 
     test('getTransactions', () async {
-      var transactions = await client.getTransactions(testAddress, limit: 3);
+      var transactions = await client.getTransactions(mainnetAddress, limit: 3);
       print(transactions.firstOrNull?.address);
     });
 
     test('getTransaction', () async {
-      final lt = '38873714000001';
-      final hash = '5cflHlU57e42_p-gRd5a6YnPtxXjA-GhbynUBwMS8TQ=';
+      final lt = '39205147000003';
+      final hash = 'WbkZIbnQbdqPB9zYYeaFBxWFqgRKscX48q2XPbBA22Y=';
 
-      var info = await client.getTransaction(testAddress, lt, hash);
+      var info = await client.getTransaction(mainnetAddress, lt, hash);
       print(info!);
     });
 
     test('runMethod', () async {
-      var seqno = await client.runMethod(testAddress, 'seqno');
+      var seqno = await client.runMethod(mainnetAddress, 'seqno');
       print(seqno.gasUsed);
 
       if (seqno.stack.items.firstOrNull is TiInt) {

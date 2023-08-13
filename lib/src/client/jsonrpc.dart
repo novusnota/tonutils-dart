@@ -579,19 +579,13 @@ class TonJsonRpc {
           stack.add(TiNull());
 
         case 'cell':
-          stack.add(TiCell(
-            (Cell.fromBoc(Uint8List.fromList(base64.decode(src[i][1]))))[0],
-          ));
+          stack.add(TiCell(Cell.fromBocBase64(src[i][1])));
 
         case 'slice':
-          stack.add(TiSlice(
-            (Cell.fromBoc(Uint8List.fromList(base64.decode(src[i][1]))))[0],
-          ));
+          stack.add(TiSlice(Cell.fromBocBase64(src[i][1])));
 
         case 'builder':
-          stack.add(TiBuilder(
-            (Cell.fromBoc(Uint8List.fromList(base64.decode(src[i][1]))))[0],
-          ));
+          stack.add(TiBuilder(Cell.fromBocBase64(src[i][1])));
 
         case _:
           throw 'Unsupported stack item type ${src[i][0]}';
@@ -1260,7 +1254,17 @@ RpcCallGetMethod _parseCallGetMethod(dynamic responseData) {
     var stacki = <String>[];
 
     for (var j = 0; j < rsi.length; j += 1) {
-      stacki.add(rsi[j] as String);
+      if (rsi[j] is Map<String, dynamic>) {
+        stacki.add(rsi[j]['bytes'] as String);
+        continue;
+      }
+
+      if (rsi[j] is String) {
+        stacki.add(rsi[j] as String);
+        continue;
+      }
+
+      throw 'Item ${rsi[j]} is not a Map<String, dynamic> nor a String; current main stack is:\n$stack\n\nCurrently formed stack is:\n$stacki';
     }
 
     stack.add(stacki);

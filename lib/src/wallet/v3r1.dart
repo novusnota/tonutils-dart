@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:typed_data';
 
 import '../dataformat/address/api.dart' show InternalAddress, contractAddress;
@@ -52,10 +51,10 @@ class WalletContractV3R1 implements Contract {
 
   WalletContractV3R1(this.publicKey, [this.workChain = 0, int? walletId]) {
     this.walletId = walletId ?? 698983191 + workChain;
-    final decoded = base64.decode(
-        'te6cckEBAQEAYgAAwP8AIN0gggFMl7qXMO1E0NcLH+Ck8mCDCNcYINMf0x/TH/gjE7vyY+1E0NMf0x/T/9FRMrryoVFEuvKiBPkBVBBV+RDyo/gAkyDXSpbTB9QC+wDo0QGkyMsfyx/L/8ntVD++buA=');
+    final encodedCell =
+        'te6cckEBAQEAYgAAwP8AIN0gggFMl7qXMO1E0NcLH+Ck8mCDCNcYINMf0x/TH/gjE7vyY+1E0NMf0x/T/9FRMrryoVFEuvKiBPkBVBBV+RDyo/gAkyDXSpbTB9QC+wDo0QGkyMsfyx/L/8ntVD++buA=';
 
-    var code = Cell.fromBoc(Uint8List.fromList(decoded))[0];
+    var code = Cell.fromBocBase64(encodedCell);
     var data = beginCell()
         .storeUint(BigInt.zero, 32) // Seqno: 0
         .storeUint(BigInt.from(this.walletId), 32)
