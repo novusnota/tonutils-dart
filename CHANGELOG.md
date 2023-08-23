@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.5.6
+
+Bugfix of methods of Nano class
+
 ## 0.5.5
 
 Bugfix of internal function _parseCallGetMethod: [issue](https://github.com/novusnota/tonutils-dart/issues/2)
