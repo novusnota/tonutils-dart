@@ -1,8 +1,9 @@
+@Skip('Can fail due to errors on the toncenter side, skipping for now.')
 @TestOn('vm')
 
 import 'dart:io' show File;
 import 'package:tonutils/tonutils.dart' show InternalAddress, TonJsonRpc, TiInt;
-import 'package:test/test.dart' show TestOn, group, test; // expect
+import 'package:test/test.dart' show Skip, TestOn, group, test; // expect
 
 void main() {
   var apiKeyMainnet =
