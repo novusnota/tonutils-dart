@@ -10,7 +10,7 @@ WARNING: Some underlying APIs of this library are subject to change in near futu
 ---
 
 If you love this library and want to support its development you can donate any amount of coins to this TON address ☺️`EQDew1rvHuMmMkmxG_fQahGymzIOF2_9TpgLftMUuxpKLE_u`\
-To donate in other cryptocurrencies, use: <a href="https://github.com/novusnota/tonutils-dart/blob/main/.github/DONATE.md" alt="Donate button"><img src="https://img.shields.io/badge/-Donate-red?logo=undertale" /></a>
+To donate in other cryptocurrencies, use: <a href="https://github.com/novusnota/novusnota/blob/main/DONATE.md" alt="Donate button"><img src="https://img.shields.io/badge/-Donate-red?logo=undertale" /></a>
 
 ## 🍰 Features
 
