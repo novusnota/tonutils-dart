@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.5.7
+
+Updated libraries:
+- `pinenacl`: from `0.5.1` to `0.6.0`
+- `lints`: from `2.0.0` to `4.0.0`
+
 ## 0.5.6
 
 Bugfix of methods of Nano class
